@@ -5,11 +5,191 @@
 </html> 
 <html>
 	<head>
+
+
+
 		<title>Erez Dafni SQL Portfolio</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style>
+			
+			
+			.card{
+			position: absolute;
+			top:28%;
+			left:50%;
+			transform: translate(-50%,-50%);
+			width:350px;
+			height:418px;
+			border-radius: 16px;
+			overflow: hidden;
+			box-shadow: 0 20px 50px 5px rgba(0,0,8,0.6);
+			cursor: pointer;
+			transition: 0.5s;
+		  }
+		  .card .card-image{
+			position:absolute;
+			top:0px;
+			left:0px;
+			width:100%;
+			height:100%;
+			z-index:2;
+			background:#000;
+			transition: 0.5s;
+		  }
+		  .card:hover img{
+			opacity: 0.4;
+			transition: 0.5s;
+		  }
+		  .card:hover .card-image{
+			transform:translateY(-100px);
+			transition: all 2s;
+		  }
+		  .social-icons{
+			position:absolute;
+			top:50%;
+			left:50%;
+			transform:translate(-50%,-50%);
+			z-index:3;
+			display:flex;
+		  }
+		  .social-icons li{
+			list-style: none;
+		  }
+		  .social-icons li a{
+			position:relative;
+			display:block;
+			width:50px;
+			height:50px;
+			line-height:50px;
+			text-align: center;
+			background-color:#fff;
+			font-size:23px;
+			color:#333;
+			font-weight:bold;
+			margin:0 6px;
+			transition:0.4s;
+			transform:translateY(200px);
+			opacity: 0;
+			border-radius: 16px;
+		  }
+		  .card:hover .social-icons li a{
+			transform:translateY(0px);
+			opacity: 1;
+		  }
+		  .social-icons li a:hover{
+			background:#646363;
+			transition:0.2s;
+		  }
+		  .social-icons li a:hover .fab{
+			color:#fff;
+		  }
+		  .social-icons li a .fab{
+			transition:0.8s;
+		  }
+		  .social-icons li a .fab:hover{
+			transform:rotateY(360deg);
+			color:#fff;
+		  }
+		  .card:hover li:nth-child(1) a{
+			transition-delay: 0.1s;
+		  }
+		  .card:hover li:nth-child(2) a{
+			transition-delay: 0.2s;
+		  }
+		  .card:hover li:nth-child(3) a{
+			transition-delay: 0.3s;
+		  }
+		  .card:hover li:nth-child(4) a{
+			transition-delay: 0.4s;
+		  }
+		  .details{
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			background:#f3eeee;
+			width:100%;
+			height:150px;
+			z-index: 1;
+			padding:10px;
+		  }
+		  .details h2{
+			margin:30px 0px;
+			padding:0;
+			text-align: center;
+		  }
+		  .details h2 .job-title{
+			font-size: 1rem;
+			line-height: 2.5rem;
+			color:#272323;
+			font-weight: 500;
+		  }
+		  @media (max-width:767px){
+			.card-wrapper{
+			  width:90%;
+			}
+		  }
+		  
+			.container {
+			  position: relative;
+			  width: 50%;
+			}
+			
+			.image {
+			  opacity: 1;
+			  display: block;
+			  width: 100%;
+			  height: auto;
+			  transition: .5s ease;
+			  backface-visibility: hidden;
+			}
+			
+			.middle {
+			  transition: .5s ease;
+			  opacity: 0;
+			  position: absolute;
+			  top: 50%;
+			  left: 50%;
+			  transform: translate(-50%, -50%);
+			  -ms-transform: translate(-50%, -50%);
+			  text-align: center;
+			}
+			
+			.container:hover .image {
+			  opacity: 0.3;
+			}
+			
+			.container:hover .middle {
+			  opacity: 1;
+			}
+			
+			.text {
+			  background-color: #04AA6D;
+			  color: white;
+			  font-size: 16px;
+			  padding: 16px 32px;
+			}
+			.background {
+			  background-image: url('./images/background6.jpg');
+			  background-position: 0 1000px;
+			  padding: 16px 32px;
+			  background-position: center;
+			  background-size: cover;
+			  box-shadow: 0 20px 50px 5px rgba(0,0,8,0.6);
+			  
+			}
+			p {
+ 			 font-size: 0.875em; 
+			 text-align: center;
+			}
+			h3{
+			
+			}
+			
+			
+			</style>
 	</head>
 	<body class="is-preload">
 
@@ -19,11 +199,9 @@
 				<!-- Intro -->
 					<div id="intro">
 						<h1>Erez Dafni <br> Portfolio<br />
-						</h1>Page
+						</h1>
 						<p>BI Developer well versed in SQL, Spotfire Tibco, Data Modeling  </a><br /></p>
-						<!--<p><a href="https://www.linkedin.com/in/erezdafni/">@LinkedInPage</a>.</p>-->
 						<ul class="actions">
-							<li><a href="#header" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
 						</ul>
 					</div>
 
@@ -32,85 +210,65 @@
 				<!-- Nav -->
 					<nav id="nav">
 						<ul class="links">
-							<li class="active"><a href="index.html">SQL</a></li>
-							<li><a href="elements.html">Tableau</a></li>
-							<li><a href="generic.html">Contact Me</a></li>
-						</ul>
-						<ul class="icons">
-							<li><a href="https://www.linkedin.com/in/erezdafni/" class="icon brands fa-linkedin"><span class="label">linkedin</span></a></li>
-							<li><a href="https://github.com/edafni" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-							<li><a href="mailto:erezdafni@gnail.com" class="fas fa-envelope"><span class="label"></span></a></li>
+							<li class="active"><a href="index.html">About Me</a></li>
+							<li><a href="SQL.html">SQL</a></li>
+							<li><a href="Tableau.html">Tableau</a></li>
+							<li><a href="ContactMe.html">Contact Me</a></li>
+						
 						</ul>
 					</nav>
 
 				<!-- Main -->
-					<div id="main">
+			
+					<div id="main"; class="container">
 
 						<!-- Featured Post -->
+							
+
+
 							<article class="post featured">
-								<header class="major">
+								<div class="background">
 
-									<h2><a href="https://github.com/edafni/SQL-folder/blob/main/List%20of%20Jobs%20for%20Database.sql">List of Jobs for Database<br />
-									</a></h2>
-									<p>Extract all the jobs name with the following info: Database name, is the job active or not, and if the DB exsist or not (can be job that created to spcific DB and deleted after the job created)</p>
-								</header>
-								<a href="https://github.com/edafni/SQL-folder/blob/main/List%20of%20Jobs%20for%20Database.sql" class="image main"><img src="images/DataBase1.jpg" alt="" /></a>
-								<ul class="actions special">
-									<li><a href="https://github.com/edafni/SQL-folder/blob/main/List%20of%20Jobs%20for%20Database.sql" class="button large">View Project</a></li>
-								</ul>
+								
+									<br />
+									<br />
+									<br />
+									<br />
+									<br />
+									<br />
+									<br />
+									<br />
+									 <div class="card-wrapper">
+									   <div class="card">
+										 <div class="card-image">
+											
+										   <img decoding="async" src="images/Erez4.PNG" alt="profile-card">
+										 </div> 
+										 <ul class="social-icons">
+											<li><a href="https://www.linkedin.com/in/erezdafni/" class="icon brands fa-linkedin"><span class="label">linkedin</span></a></li>
+											<li><a href="https://github.com/edafni" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+											<li><a href="mailto:erezdafni@gnail.com" class="fas fa-envelope"><span class="label"></span></a></li>
+										 </ul>
+										 <div class="details">
+										   <h2>Erez Dafni
+											 <br>
+											 <span class="job-title">BI Developer</span>
+										   </h2>
+										 </div>
+									   </div>
+									 </div>
+									 <h3><a><br />About Me<br />
+									 </a></h3>
+									 <b><p>Focused and diligent engineer with more than 11 years of experience. <br />Experienced in BI development, SQL programming and large database analysis.<br />Passionate about technology, data, and complex problem-solving. <br />Highly organized and motivated, a fast learner with solid technical understanding and good communication skills.</p></b>
+									 <br />
+									</div>
 							</article>
+							
+								
+								
 
-						<!-- Posts -->
-							<section class="posts">
-								<article>
-									<header>
-										<h2><a href="https://github.com/edafni/SQL-folder/blob/main/Search%20value%20in%20the%20all%20DB.sql">Find a specific value in a DataBase<br />
-										</a></h2>
-									</header>
-									<a href="https://github.com/edafni/SQL-folder/blob/main/Search%20value%20in%20the%20all%20DB.sql" class="image fit"><img src="images/FindValue.jpg" alt="" /></a>
-									<p>This query find specific value in a DataBase and extract the results.</p>
-									<p>This is a complex and resource-intensive query. It is recommended <b style="color:red;">not to execute this query in a production environment</b> due to its potential impact on performance and system resources.</p>
 
-									<ul class="actions special">
-										<li><a href="https://github.com/edafni/SQL-folder/blob/main/Search%20value%20in%20the%20all%20DB.sql" class="button">view project</a></li>
-									</ul>
-								</article>
-								<article>
-									<header>
-										<h2><a href="https://github.com/edafni/SQL-folder/blob/main/relationships%20between%20tables.sql">Relationships between tables<br />
-										</a></h2>
-									</header>
-									<a href="https://github.com/edafni/SQL-folder/blob/main/relationships%20between%20tables.sql" class="image fit"><img src="images/Relationships2.jpg" alt="" /></a>
-									<p>This query provide a Relationships between tables using forign Keys.</p>
-									<p>The query returns the foreign key (FK), the names of the related and parent tables, the column names (FK), and the order of the columns in the relevant table.</p>
-									<ul class="actions special">
-										<li><a href="https://github.com/edafni/SQL-folder/blob/main/relationships%20between%20tables.sql" class="button">view project</a></li>
-									</ul>
-								</article>
-								<article>
-									<header>
-										<h2><a href="https://github.com/edafni/SQL-folder/blob/main/Retrieve%20the%20row%20count%20and%20size%20of%20all%20tables%20in%20the%20database.sql">row count & size of all tables in the database<br />
-										</a></h2>
-									</header>
-									<a href="https://github.com/edafni/SQL-folder/blob/main/Retrieve%20the%20row%20count%20and%20size%20of%20all%20tables%20in%20the%20database.sql" class="image fit"><img src="images/difSize.jpg" alt="" /></a>
-									<p>Retrieve the row count and size of all tables in the database.</p>
-									<ul class="actions special">
-										<li><a href="https://github.com/edafni/SQL-folder/blob/main/Retrieve%20the%20row%20count%20and%20size%20of%20all%20tables%20in%20the%20database.sql" class="button">view project</a></li>
-									</ul>
-								</article>
-								<article>
-									<header>
-										<h2><a href="https://github.com/edafni/SQL-folder/blob/main/Get%20Comma%20Separated%20List%20of%20all%20columns%20in%20table.SQL">Concatination of column names with comma<br />
-										</a></h2>
-									</header>
-									<a href="https://github.com/edafni/SQL-folder/blob/main/Get%20Comma%20Separated%20List%20of%20all%20columns%20in%20table.SQL" class="image fit"><img src="images/chain.jpg" alt="" /></a>
-									<p>This query retrieves the row count, size, and database names of all tables in the database.</p>
-									<ul class="actions special">
-										<li><a href="https://github.com/edafni/SQL-folder/blob/main/Get%20Comma%20Separated%20List%20of%20all%20columns%20in%20table.SQL" class="button">view project</a></li>
-									</ul>
-								</article>
 
-							</section>
 
 						<!-- Footer -->
 						<!--<footer>
