@@ -37,20 +37,30 @@
 
 				<!-- Main -->
 				<div id="main">
-
-
-					<!-- Featured Post -->
+						<!-- Featured Post -->
 						<article class="post featured">
 							<header class="major">
 								<h5>About the Queries<br /><br />
-								</a></h5>I have created these queries to simplify the data analysis job. I hope you will find these queries helpful, just as I did.<br /><br /><br />
-								<h1><a href="https://github.com/edafni/SQL-folder/blob/main/List%20of%20Jobs%20for%20Database.sql">List of Jobs for Database<br />
-								</a></h1>
-								<p>Extract all the jobs name with the following info: Database name, is the job active or not, and if the DB exsist or not (can be job that created to spcific DB and deleted after the job created)</p>
+								</a></h5>I have created these queries to simplify the data analysis job.<br/> I hope you will find these queries helpful, just as I did.
+								
+						</article>
+
+
+						<!-- Featured Post -->
+						<article class="post featured">
+							<header class="major">
+								<h5><a href="https://github.com/edafni/SQL-folder/blob/main/Search%20value%20in%20the%20all%20DB.sql">Find a specific value in a DataBase<br />
+								</a></h5>
 							</header>
-							<a href="https://github.com/edafni/SQL-folder/blob/main/List%20of%20Jobs%20for%20Database.sql" class="image main"><img src="images/DataBase1.jpg" alt="" /></a>
+							<a href="https://github.com/edafni/SQL-folder/blob/main/Search%20value%20in%20the%20all%20DB.sql" class="image fit"><img src="images/FindValue.jpg" alt="" /></a>
+							<p><b><u>Explanation:</u></b> This query find specific value in a DataBase and extract the results.<br/>
+								<b>When should you use it?</b> You should use this query when you need to search for a specific value across all databases and you are unsure about the correct column that contains the value.<br/>
+							    
+								<b>If you know the correct column:</b> You can utilize the "sp_MSforeachtable" procedure. This procedure allows you to perform a specific action on each table in a database. By using this procedure, you can execute a query on multiple tables to find the desired value based on the known column.
+								This is a complex and resource-intensive query. It is recommended <b style="color:red;">not to execute this query in a production environment</b> due to its potential impact on performance and system resources.</p>
+
 							<ul class="actions special">
-								<li><a href="https://github.com/edafni/SQL-folder/blob/main/List%20of%20Jobs%20for%20Database.sql" class="button large">View Script</a></li>
+								<li><a href="https://github.com/edafni/SQL-folder/blob/main/Search%20value%20in%20the%20all%20DB.sql" class="button">view Script</a></li>
 							</ul>
 						</article>
 
@@ -58,15 +68,16 @@
 						<section class="posts">
 							<article>
 								<header>
-									<h2><a href="https://github.com/edafni/SQL-folder/blob/main/Search%20value%20in%20the%20all%20DB.sql">Find a specific value in a DataBase<br />
+									<h2><a href="https://github.com/edafni/SQL-folder/blob/main/List%20of%20Jobs%20for%20Database.sql">List of Jobs for Database<br />
 									</a></h2>
-								</header>
-								<a href="https://github.com/edafni/SQL-folder/blob/main/Search%20value%20in%20the%20all%20DB.sql" class="image fit"><img src="images/FindValue.jpg" alt="" /></a>
-								<p>This query find specific value in a DataBase and extract the results.</p>
-								<p>This is a complex and resource-intensive query. It is recommended <b style="color:red;">not to execute this query in a production environment</b> due to its potential impact on performance and system resources.</p>
-
+									</header>
+								<a href="https://github.com/edafni/SQL-folder/blob/main/List%20of%20Jobs%20for%20Database.sql" class="image main"><img src="images/DataBase1.jpg" alt="" /></a>
+								<p><b><u>Explanation:</u></b> The query extracts data about the jobs in the system, including both active and non-active jobs. 
+									<b>When should you use it?</b> When you want to gather information about jobs, such as their active status, whether the corresponding database for each job exists, and more. 
+									It can be useful in scenarios where you need comprehensive details about jobs and their associated databases, providing a deeper understanding of the system's job-related information.</p>
+						
 								<ul class="actions special">
-									<li><a href="https://github.com/edafni/SQL-folder/blob/main/Search%20value%20in%20the%20all%20DB.sql" class="button">view Script</a></li>
+									<li><a href="https://github.com/edafni/SQL-folder/blob/main/List%20of%20Jobs%20for%20Database.sql" class="button large">View Script</a></li>
 								</ul>
 							</article>
 							<article>
@@ -75,9 +86,12 @@
 									</a></h2>
 								</header>
 								<a href="https://github.com/edafni/SQL-folder/blob/main/relationships%20between%20tables.sql" class="image fit"><img src="images/Relationships2.jpg" alt="" /></a>
-								<p>This query provide a Relationships between tables using forign Keys.</p>
-								<p>The query returns the foreign key (FK), the names of the related and parent tables, the column names (FK), and the order of the columns in the relevant table.</p>
-								<ul class="actions special">
+								<p><b><u>Explanation:</u></b> 
+									This query establishes relationships between tables using foreign keys. 
+									It retrieves the foreign key (FK), the names of the related and parent tables, the column names (FK), and the order of the columns in the relevant table. 
+									This information helps to understand the connections and dependencies between tables based on their foreign key relationships.
+									<br/><b>When should you use it?</b> If want to gain a deeper understanding of the connections between tables. 
+									<ul class="actions special">
 									<li><a href="https://github.com/edafni/SQL-folder/blob/main/relationships%20between%20tables.sql" class="button">view Script</a></li>
 								</ul>
 							</article>
@@ -87,18 +101,22 @@
 									</a></h2>
 								</header>
 								<a href="https://github.com/edafni/SQL-folder/blob/main/Retrieve%20the%20row%20count%20and%20size%20of%20all%20tables%20in%20the%20database.sql" class="image fit"><img src="images/difSize.jpg" alt="" /></a>
-								<p>Retrieve the row count and size of all tables in the database.</p>
+								<p><b><u>Explanation:</u></b> Retrieve the row count and size of all tables in the database.
+									<br/><b>When should you use it?</b> when you want to obtain information about the size of tables and gain insights into the overall sizing of the database. 
+									This query allows you to analyze the storage requirements and understand the distribution of data across tables, which can be beneficial for monitoring database growth, optimizing storage utilization, and identifying tables that may require attention in terms of size and performance.</p>
 								<ul class="actions special">
 									<li><a href="https://github.com/edafni/SQL-folder/blob/main/Retrieve%20the%20row%20count%20and%20size%20of%20all%20tables%20in%20the%20database.sql" class="button">view Script</a></li>
 								</ul>
 							</article>
 							<article>
 								<header>
-									<h2><a href="https://github.com/edafni/SQL-folder/blob/main/Get%20Comma%20Separated%20List%20of%20all%20columns%20in%20table.SQL">Concatination of column names with comma<br />
+									<h2><a href="https://github.com/edafni/SQL-folder/blob/main/Get%20Comma%20Separated%20List%20of%20all%20columns%20in%20table.SQL">CONCATENATION OF COLUMN NAMES WITH COMMA<br />
 									</a></h2>
 								</header>
 								<a href="https://github.com/edafni/SQL-folder/blob/main/Get%20Comma%20Separated%20List%20of%20all%20columns%20in%20table.SQL" class="image fit"><img src="images/chain.jpg" alt="" /></a>
-								<p>This query retrieves the row count, size, and database names of all tables in the database.</p>
+								<p><b><u>Explanation:</u></b> This query concatenates column names with commas.
+									<br/><b>When should you use it?</b> When you need to extract column names for a specific table, especially if the table has multiple columns. This query makes the task of retrieving column names much easier and more efficient. 
+									By concatenating the column names with commas, you can quickly obtain a consolidated list of column names for a specific table, simplifying the process of working with tables that have numerous columns.</p>
 								<ul class="actions special">
 									<li><a href="https://github.com/edafni/SQL-folder/blob/main/Get%20Comma%20Separated%20List%20of%20all%20columns%20in%20table.SQL" class="button">view Script</a></li>
 								</ul>
