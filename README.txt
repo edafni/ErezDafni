@@ -1,1 +1,2 @@
-This files creates my portfolio
+
+These files comprise my portfolio.
